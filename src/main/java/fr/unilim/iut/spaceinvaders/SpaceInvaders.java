@@ -4,6 +4,8 @@ import fr.unilim.iut.spaceinvaders.utils.HorsEspaceJeuException;
 
 public class SpaceInvaders {
 	
+	private static final int LONGUEUR_MINIMUM = 0;
+
 	private static final char MARQUE_FIN_LIGNE = '\n';
 
 	private static final char MARQUE_VIDE = '.';
@@ -80,6 +82,14 @@ public class SpaceInvaders {
 	public void deplacerVaisseauVersLaDroite() {
 		if (vaisseau.abscisse()< (longueur-1)) {
 			vaisseau.seDeplacerVersLaDroite();
+		}
+	}
+
+
+
+	public void deplacerVaisseauVersLaGauche() {
+		if (vaisseau.abscisse()> LONGUEUR_MINIMUM) {
+			vaisseau.seDeplacerVersLaGauche();
 		}
 	}
 	
