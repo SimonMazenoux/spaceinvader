@@ -51,7 +51,7 @@ public class SpaceInvadersTest {
 	@Test
 	public void test_UnNouveauVaisseauPositionneHorsEspaceJeu_DoitLeverUneException() {
 		try {
-			spaceinvaders.positionnerUnNouveauVaisseau(15,9);
+			spaceinvaders.positionnerUnNouveauVaisseau(15,8);
 			fail("Position trop à droite : devrait déclencher une exception HorsEspaceJeuException");
 		} catch (final HorsEspaceJeuException e) {
 		}
