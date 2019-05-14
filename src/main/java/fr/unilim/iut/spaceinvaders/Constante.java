@@ -7,6 +7,7 @@ public class Constante {
 
     public static final int VAISSEAU_LONGUEUR = 30;
     public static final int VAISSEAU_HAUTEUR = 20;
+    public static final int VAISSEAU_VITESSE = 5;
     
     public static final int LONGUEUR_MINIMUM = 0;
     

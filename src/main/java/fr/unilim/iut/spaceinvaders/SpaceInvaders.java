@@ -107,8 +107,8 @@ public class SpaceInvaders implements Jeu{
 	}
 	
 	public void initialiserJeu() {
-	    Position positionVaisseau = new Position(this.longueur/2,this.hauteur-1);
-	    Dimension dimensionVaisseau = new Dimension(Constante.VAISSEAU_LONGUEUR, Constante.VAISSEAU_HAUTEUR);
-	    positionnerUnNouveauVaisseau(dimensionVaisseau, positionVaisseau, 1);
-    }
+		Position positionVaisseau = new Position(this.longueur/2,this.hauteur-1);
+		Dimension dimensionVaisseau = new Dimension(Constante.VAISSEAU_LONGUEUR, Constante.VAISSEAU_HAUTEUR);
+		positionnerUnNouveauVaisseau(dimensionVaisseau, positionVaisseau, Constante.VAISSEAU_VITESSE);
+	}
 }
