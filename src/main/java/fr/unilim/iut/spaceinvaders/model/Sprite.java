@@ -1,4 +1,4 @@
-package fr.unilim.iut.spaceinvaders;
+package fr.unilim.iut.spaceinvaders.model;
 
 public abstract class Sprite {
 
@@ -7,7 +7,6 @@ public abstract class Sprite {
 	protected int vitesse;
 
 	public Sprite(Dimension dimension, Position origine, int vitesse) {
-		super();
 		this.dimension = dimension;
 		this.origine = origine;
 		this.vitesse = vitesse;
@@ -54,7 +53,21 @@ public abstract class Sprite {
 	public int longueur() {
 		return this.dimension.longueur();
 	}
+	
+	public boolean estImmobileAGauche() {
+		if(this.origine.x <= 0) {
+			return true;
+		}
+		return false;
+	}
 
+	public boolean estImmobileADroite() {
+		if(this.origine.x > this.dimension.longueur - this.dimension.longueur) {
+			return true;
+		}
+		return false;
+	}
+	
 	public void deplacerVerticalementVers(Direction direction) {
 		this.origine.changerOrdonnee(this.origine.ordonnee() + direction.valeur()*vitesse);
 	}
